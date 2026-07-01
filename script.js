@@ -60,7 +60,8 @@ paintingModeBtn.addEventListener('click', () => {
 	paintingModeBtn.className = `paintingModeBtn ${isErasing ? 'cleanUp' : 'paint'}`;
 });
 
-eraser.addEventListener('click', () => createGrid(gridSizeSlider.value));
+eraser.addEventListener('click', createGrid);
+colorPicker.addEventListener('input', updateBrush);
 
 function paintArea(x,y) {
 	const idx = updateBrush();
