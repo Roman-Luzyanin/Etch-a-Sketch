@@ -120,8 +120,9 @@ function createGrid() {
 	const boxSize = getBoxSize();
 	container.innerHTML = '';
 	updateSlider(boxSize);
+	colorPicker.value = '#DAA520';
 	updateBrush();
-	colorPicker.value = '#DAA520';   
+	   
 	gridSizeValue.textContent = `${gridSizeSlider.value}x${gridSizeSlider.value}`;
 	brushSizeValue.textContent = 'small';
 	eraserSizeValue.textContent = 'small';
