@@ -1,0 +1,261 @@
+* {box-sizing: border-box; user-select: none;}
+  
+body {
+	display: flex;
+	justify-content: center;
+}
+
+button,
+input {
+	cursor: pointer;
+}
+
+input:disabled {
+	cursor: default;
+}
+
+.controls {
+	width: 245px;
+	border: 1px solid black;
+	align-self: center;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+	position: relative;
+	border-radius: 10px;
+	z-index: 100;
+	background: white;
+}
+
+.controls::before {
+	content: '';
+	position: absolute;
+	z-index: -10;
+	top: 9px;
+	left: 9px;
+	width: 92%;
+	height: 93%;
+	border: 1px solid gray;
+	box-shadow: 0 0 6px black;
+	border-radius: 10px;
+	background: no-repeat url(./images/bg-2.jpg) bottom  / cover;
+}
+
+.controlGroup label {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.canvas {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 10;
+}
+
+.workSpace {
+	display: flex;	
+	justify-content: space-evenly;
+	width: 85%;
+	margin-top: 15px;
+	padding-bottom: 30px;
+	border: 1px solid gray;
+	box-shadow: 0 0 5px black;
+	border-radius: 10px;
+	background: no-repeat url(./images/bg.jpg) bottom / 120% 120%;
+}
+    
+.container {
+	width: 501px;
+	height: 501px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	cursor: none;
+	position: relative;
+	
+}
+
+.container::before {
+	content: '';
+	position: absolute;
+	z-index: -10;
+	top: -9px;
+	left: -9px;
+	width: 103%;
+	height: 103%;
+	border: 1px solid gray;
+	box-shadow: 0 0 5px black;
+	background-color: white;
+}
+
+.paintingModeBtn {
+	margin: 30px 0;
+	padding: 5px 15px;
+	font-size: 24px;
+	border: 3px outset black;
+	border-radius: 10px;
+	width: 200px;
+	background: no-repeat url(./images/bg-2.jpg) bottom  / cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.paintingModeBtn:active {
+	border: 3px inset black;
+}
+
+.paintingModeBtn:hover {
+	color: gray;
+}
+
+.paint::before {
+	content: '';
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 20px;
+	height: 30px;
+	background: no-repeat url(./images/blot-1.png) bottom  / contain;
+}
+
+.paint::after {
+	content: '';
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	width: 30px;
+	height: 30px;
+	background: no-repeat url(./images/blot-2.png) bottom  / contain;
+}
+
+.cleanUp::before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 35px;
+	height: 35px;
+	background: no-repeat url(./images/cleaner.png) bottom  / contain;
+}
+
+.cleanUp::after {
+	content: '';
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	width: 15px;
+	height: 15px;
+	background: no-repeat url(./images/caution.png) bottom  / contain;
+}
+
+.box {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: white;
+}
+
+.brush {
+	display: none;
+	position: fixed;
+	border: 3px solid gray;
+	border-radius: 10px;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 1000;
+	background: no-repeat url(./images/brush.png) center / 60%;
+}
+
+.controlGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+.canvasControls {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.colorPicker {
+	border: none;
+	background: none;
+	width: 51px;
+  height: 51px;
+  display: inline-block;
+}
+
+.colorPickerWrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.colorPickerWrapper::after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: -1px;
+	width: 50px;
+  height: 50px;
+	background: no-repeat url(./images/pallete.png) center / contain;
+	pointer-events: none;
+}
+
+.eraser {
+	display: none;
+	width: 50px;
+  height: 50px;
+  background: no-repeat url(./images/eraser.png) center / contain;
+	cursor: pointer;
+}
+
+input[type="color"]::-moz-color-swatch,
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.ticks {
+	width: 88%;
+	margin: -4px auto 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tick {
+	width: 1px;
+	height: 5px;
+	background-color: gray;
+	z-index: -10;
+}
+
+.label {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.erase {
+	background: no-repeat url(./images/cleaner.png) center / contain;
+}
+
+[data-title] { position: relative; }
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 20%;
+  left: 105%;
+  background: gray;
+  border-radius: 10px;
+  color: #fff;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+
+
+
+

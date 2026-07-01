@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' href='styles.css'>
+  <script src="script.js" defer></script>
+	<title>Etch-a-Sketch</title>
+</head>
+<body>
+	<div class='workSpace'>
+		<div class='controls'>
+			<div class='controlGroup'>
+				<label>Grid size: <span class='gridSizeValue'></span></label>
+				<input type='range' class='gridSizeSlider' min='10' max='50' step='10' value='20' list='ticks'>
+				
+				<datalist id='ticks'>
+					<option value='10' label='|'></option>
+					<option value='20' label='|'></option>
+					<option value='30' label='|'></option>
+					<option value='40' label='|'></option>
+					<option value='50' label='|'></option>
+				</datalist>
+			</div>
+			
+			<div class='controlGroup'>
+				<label class='label'>Brush size: <span class='brushSizeValue'></span></label>
+				<input type='range' class='paintSizeSlider'>
+				<div class='ticks'>
+					<span class='tick'></span>
+					<span class='tick'></span>
+					<span class='tick'></span>
+				</div>
+			</div>
+			
+			<div class='controlGroup'>
+				<label class='label'>Eraser size: <span class='eraserSizeValue'></span></label>
+				<input type='range' class='eraseSizeSlider'>
+				<div class='ticks'>
+					<span class='tick'></span>
+					<span class='tick'></span>
+					<span class='tick'></span>
+				</div>
+			</div>
+		</div>
+	
+		<div class='canvas'>
+			<div class='canvasControls'>
+				<button class='paintingModeBtn paint'>Painting mode</button>
+				<div class='colorPickerWrapper' data-title='Choose a color'>
+					<input type='color' class='colorPicker'>
+				</div>
+				<div class='eraser' data-title='Erase ALL'></div>
+			</div>
+			<div class='container'></div>
+			<div class='brush'></div>
+		</div>
+	</div>
+</body>
+</html>
