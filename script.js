@@ -122,7 +122,6 @@ function createGrid() {
 	updateSlider(boxSize);
 	colorPicker.value = '#DAA520';
 	updateBrush();
-	   
 	gridSizeValue.textContent = `${gridSizeSlider.value}x${gridSizeSlider.value}`;
 	brushSizeValue.textContent = 'small';
 	eraserSizeValue.textContent = 'small';
