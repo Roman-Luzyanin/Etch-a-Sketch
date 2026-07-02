@@ -180,11 +180,15 @@ input:disabled {
 }
 
 .colorPicker {
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
 	border: none;
 	background: none;
 	overflow: hidden;
 	width: 51px;
   	height: 51px;
+	border-radius: 50%;
   	display: inline-block;
 }
 
