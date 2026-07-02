@@ -57,7 +57,7 @@ input:disabled {
 .workSpace {
 	display: flex;	
 	justify-content: space-evenly;
-	width: 85%;
+	width: 1150px;
 	margin-top: 15px;
 	padding-bottom: 30px;
 	border: 1px solid gray;
