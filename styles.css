@@ -182,9 +182,10 @@ input:disabled {
 .colorPicker {
 	border: none;
 	background: none;
+	overflow: hidden;
 	width: 51px;
-  height: 51px;
-  display: inline-block;
+  	height: 51px;
+  	display: inline-block;
 }
 
 .colorPickerWrapper {
