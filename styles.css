@@ -57,7 +57,7 @@ input:disabled {
 .workSpace {
 	display: flex;	
 	justify-content: space-evenly;
-	width: 1150px;
+	width: 85%;
 	margin-top: 15px;
 	padding-bottom: 30px;
 	border: 1px solid gray;
@@ -180,16 +180,11 @@ input:disabled {
 }
 
 .colorPicker {
-	-webkit-appearance: none;
-  	-moz-appearance: none;
-  	appearance: none;
 	border: none;
 	background: none;
-	overflow: hidden;
 	width: 51px;
-  	height: 51px;
-	border-radius: 50%;
-  	display: inline-block;
+  height: 51px;
+  display: inline-block;
 }
 
 .colorPickerWrapper {
